@@ -12,7 +12,7 @@ function start(response, postData){
     '<body>'+
     '<form action="/upload" method="post">'+
     '<textarea name="text" rows="20" cols="60"></textarea>'+
-    '<input type="submit" value="Submit text" />'+
+    '<input type="submit" value="Gönder" />'+
     '</form>'+
     '</body>'+
     '</html>';
@@ -27,7 +27,7 @@ function upload(response, postData){
 	
 	console.log("Request handler 'upload' was called.");
 	response.writeHead(200, {"Content-Type":"text/plain"});
-	response.write("You've sent: " + querystring.parse(postData).text);
+	response.write("Gönderdiğiniz metin: " + querystring.parse(postData).text);
 	response.end();
 	
 }
